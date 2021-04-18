@@ -189,7 +189,6 @@ Go语言中并没有删除切片元素的专用方法，我们可以使用切片
 要从切片a中删除索引为index的元素，操作方法是a = append(a[:index], a[index+1:]...)
 */
 func sliceDemo13() {
-
 	s := []int{1, 2, 3, 4, 5}
 	fmt.Println(s)
 	s = append(s[:2], s[3:]...)
