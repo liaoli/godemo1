@@ -31,6 +31,7 @@ func main() {
 	string2Num()
 
 }
+
 func string2Num() {
 	//1、string类型转换成整型
 
@@ -61,6 +62,7 @@ func string2Num() {
 	b, _ := strconv.ParseBool("xxxxxxx") // string 转 bool
 	fmt.Printf("值：%v 类型：%T", b, b)
 }
+
 func other2String() {
 	//1、通fmt.Sprintf() 把其他类型转换成 String 类型
 
@@ -150,7 +152,7 @@ func byteType() {
 	str := "dfsdf"
 
 	fmt.Printf("value = %v flag = %c type is %T  size is %v \n", str[2], str[2], str[2], unsafe.Sizeof(str[2]))
-	//4、一个汉子占用 3个字节(utf-8), 一个字母占用一个字节
+	//4、一个汉字占用 3个字节(utf-8), 一个字母占用一个字节
 	// unsafe.Sizeof() 没法查看string类型数据所占用的存储空间
 
 	var str1 = "this" //占用4个字节
