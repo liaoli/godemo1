@@ -1,7 +1,23 @@
 package main
 
-func mian() {
+import "fmt"
 
+func main() {
+
+	w := haier{
+		dryer{},
+	}
+
+	w.wash()
+	w.dry()
+	w.dryer.dry()
+
+	var wm WashingMachine
+
+	wm = w
+
+	wm.wash()
+	wm.dry()
 }
 
 /*
@@ -12,4 +28,18 @@ func mian() {
 type WashingMachine interface {
 	wash()
 	dry()
+}
+
+type dryer struct{}
+
+type haier struct {
+	dryer
+}
+
+func (d dryer) dry() {
+	fmt.Println("甩干")
+}
+
+func (h haier) wash() {
+	fmt.Println("洗一洗")
 }
